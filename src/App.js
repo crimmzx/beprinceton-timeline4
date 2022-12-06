@@ -1,24 +1,70 @@
-import logo from './logo.svg';
 import './App.css';
+import timelineElements from './timelineElements';
+import {FaUserFriends} from 'react-icons/fa';
+import { ReactComponent as SchoolIcon } from "./school.svg";
+import { ReactComponent as Graph } from "./calgraphs.svg";
+
+
+import{VerticalTimeline, 
+  VerticalTimelineElement
+} from "react-vertical-timeline-component";
+
+import "react-vertical-timeline-component/style.min.css"
 
 function App() {
+  let workIconStyles = { background: "#06D6A0" };
+  let schoolIconStyles = { background: "#f9c74f" };
+  <div>
+    <graph1/>
+  </div>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div>
+    <h1 className = "title">BePrinceton.</h1>
+    <h2>BeReal images are images that are taken at a random time whenever the app chooses to go off. <br>
+    </br>
+      The images include both the front and the back camera. Each BeReal image contains information on the date, location, people, and my general mood.
+      <br></br>Both images are condensed into one with the top left including the front camera. <br>
+      </br>
+      This project represents the BeReals I've taken at Princeton
+      and displays them in a timeline order. 
+    </h2>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
+    <VerticalTimeline>
+      {
+        timelineElements.map(element => {
+          let isWorkIcon = element.icon === "friends"
+          return(
+            <VerticalTimelineElement
+            key = {element.key}
+            date = {element.date}
+            dateClassName = "date"
+            iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+            icon = {isWorkIcon ? <FaUserFriends /> : <SchoolIcon />}
+            >
+            <h3 className='vertical-timeline-element-title'>
+                {element.title}
+            </h3>
+            <img src = {element.image} alt = "BeReals!" width = "100%" height = "100%"></img>
+            <h5 className='vertical-timeline-element-subtitle'>
+                Locations: {element.location}
+            </h5>
+            <h5 className='moods'>
+                Moods: {element.mood}
+            </h5>
+            <p id = "description">{element.description }</p>
+            </VerticalTimelineElement>
+          );
+        })}
+    </VerticalTimeline>
+    <h1>Summary Statistics:</h1>
+    <div2 className = "graph">
+      <Graph />
+    </div2>
+    <h2>That's All Folks!
+    </h2>
+    <h2> William Zhang Fall 2022.
+    </h2>
+  </div>
   );
 }
 
