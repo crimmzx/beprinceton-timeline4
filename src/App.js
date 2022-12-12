@@ -1,5 +1,8 @@
 import './App.css';
 import timelineElements from './timelineElements';
+import octTimelineElements from './octTimelineElements';
+import novTimelineElements from './novTimelineElements';
+import decTimelineElements from './decTimelineElements';
 import {FaUserFriends} from 'react-icons/fa';
 import { ReactComponent as SchoolIcon } from "./school.svg";
 import { ReactComponent as Graph } from "./calgraphs.svg";
@@ -29,6 +32,7 @@ function App() {
       and displays them in a timeline order. 
     </h2>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
+    <h1>September:</h1>
     <VerticalTimeline>
       {
         timelineElements.map(element => {
@@ -46,13 +50,101 @@ function App() {
             </h3>
             <img src = {element.image} alt = "BeReals!" width = "100%" height = "100%"></img>
             <h5 className='vertical-timeline-element-subtitle'>
-                Locations: {element.location}
+                Location: {element.location}
             </h5>
             <h5 className='moods'>
-                Moods: {element.mood}
+                Mood: {element.mood}
             </h5>
             <p id = "description">{element.description }</p>
             </VerticalTimelineElement>
+        
+          );
+        })}
+    </VerticalTimeline>
+    <h1>October:</h1>
+    <VerticalTimeline>
+      {
+        octTimelineElements.map(element => {
+          let isWorkIcon = element.icon === "friends"
+          return(
+            <VerticalTimelineElement
+            key = {element.key}
+            date = {element.date}
+            dateClassName = "date"
+            iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+            icon = {isWorkIcon ? <FaUserFriends /> : <SchoolIcon />}
+            >
+            <h3 className='vertical-timeline-element-title'>
+                {element.title}
+            </h3>
+            <img src = {element.image} alt = "BeReals!" width = "100%" height = "100%"></img>
+            <h5 className='vertical-timeline-element-subtitle'>
+                Location: {element.location}
+            </h5>
+            <h5 className='moods'>
+                Mood: {element.mood}
+            </h5>
+            <p id = "description">{element.description }</p>
+            </VerticalTimelineElement>
+        
+          );
+        })}
+    </VerticalTimeline>
+    <h1>November:</h1>
+    <VerticalTimeline>
+      {
+        novTimelineElements.map(element => {
+          let isWorkIcon = element.icon === "friends"
+          return(
+            <VerticalTimelineElement
+            key = {element.key}
+            date = {element.date}
+            dateClassName = "date"
+            iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+            icon = {isWorkIcon ? <FaUserFriends /> : <SchoolIcon />}
+            >
+            <h3 className='vertical-timeline-element-title'>
+                {element.title}
+            </h3>
+            <img src = {element.image} alt = "BeReals!" width = "100%" height = "100%"></img>
+            <h5 className='vertical-timeline-element-subtitle'>
+                Location: {element.location}
+            </h5>
+            <h5 className='moods'>
+                Mood: {element.mood}
+            </h5>
+            <p id = "description">{element.description }</p>
+            </VerticalTimelineElement>
+        
+          );
+        })}
+    </VerticalTimeline>
+    <h1>December:</h1>
+    <VerticalTimeline>
+      {
+        decTimelineElements.map(element => {
+          let isWorkIcon = element.icon === "friends"
+          return(
+            <VerticalTimelineElement
+            key = {element.key}
+            date = {element.date}
+            dateClassName = "date"
+            iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+            icon = {isWorkIcon ? <FaUserFriends /> : <SchoolIcon />}
+            >
+            <h3 className='vertical-timeline-element-title'>
+                {element.title}
+            </h3>
+            <img src = {element.image} alt = "BeReals!" width = "100%" height = "100%"></img>
+            <h5 className='vertical-timeline-element-subtitle'>
+                Location: {element.location}
+            </h5>
+            <h5 className='moods'>
+                Mood: {element.mood}
+            </h5>
+            <p id = "description">{element.description }</p>
+            </VerticalTimelineElement>
+        
           );
         })}
     </VerticalTimeline>
@@ -60,8 +152,6 @@ function App() {
     <div2 className = "graph">
       <Graph />
     </div2>
-    <h2>That's All Folks!
-    </h2>
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
@@ -69,3 +159,4 @@ function App() {
 }
 
 export default App;
+
