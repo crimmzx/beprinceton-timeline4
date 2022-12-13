@@ -141,16 +141,6 @@ let OctTimelineElements = [
       },
       {
         id: 20,
-        title: "Heading back home in a Car with my family.",
-        location: "Car",
-        mood: "Happy",
-        image: "pictures/10_19.jpg",
-        description: "Going back home in a car! Haven't sat in a car in a while though.",
-        date: "10/18",
-        icon: "friends",
-      },
-      {
-        id: 20,
         title: "Going on a small road trip with my family!",
         location: "Car",
         mood: "Tired",
