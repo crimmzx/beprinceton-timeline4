@@ -4,9 +4,16 @@ import octTimelineElements from './octTimelineElements';
 import novTimelineElements from './novTimelineElements';
 import decTimelineElements from './decTimelineElements';
 import {FaUserFriends} from 'react-icons/fa';
-import { ReactComponent as SchoolIcon } from "./school.svg";
-import { ReactComponent as Graph } from "./calgraphs.svg";
-
+import { ReactComponent as SchoolIcon } from "./svgs/school.svg";
+import { ReactComponent as Graph } from "./svgs/calgraphs.svg"
+import { ReactComponent as SepMood } from "./svgs/bar graphs/Mood (Sep).svg";
+import { ReactComponent as SepLoc } from "./svgs/bar graphs/pi graphs/Locations (Sep).svg";
+import { ReactComponent as OctMood } from "./svgs/bar graphs/Mood (Oct).svg";
+import { ReactComponent as OctLoc } from "./svgs/bar graphs/pi graphs/Location (Oct).svg";
+import { ReactComponent as NovMood } from "./svgs/bar graphs/Mood (Nov).svg";
+import { ReactComponent as NovLoc } from "./svgs/bar graphs/pi graphs/Location (Nov).svg";
+import { ReactComponent as DecMood } from "./svgs/bar graphs/Mood (Dec).svg";
+import { ReactComponent as DecLoc } from "./svgs/bar graphs/pi graphs/Location (Dec).svg";
 
 import{VerticalTimeline, 
   VerticalTimelineElement
@@ -32,6 +39,8 @@ function App() {
       and displays them in a timeline order. 
     </h2>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
+    
+    
     <h1>September:</h1>
     <VerticalTimeline>
       {
@@ -61,6 +70,13 @@ function App() {
           );
         })}
     </VerticalTimeline>
+    <h1>September Stats</h1>
+    <div2 className = "graph">
+      <SepMood />
+    </div2>
+    <div2 className = "graph">
+      <SepLoc />
+    </div2>
     <h1>October:</h1>
     <VerticalTimeline>
       {
@@ -90,6 +106,13 @@ function App() {
           );
         })}
     </VerticalTimeline>
+    <h1>October Stats</h1>
+    <div2 className = "graph">
+      <OctMood />
+    </div2>
+    <div2 className = "graph">
+      <OctLoc />
+    </div2>
     <h1>November:</h1>
     <VerticalTimeline>
       {
@@ -119,6 +142,13 @@ function App() {
           );
         })}
     </VerticalTimeline>
+    <h1>November Stats</h1>
+    <div2 className = "graph">
+      <NovMood />
+    </div2>
+    <div2 className = "graph">
+      <NovLoc />
+    </div2>
     <h1>December:</h1>
     <VerticalTimeline>
       {
@@ -148,10 +178,19 @@ function App() {
           );
         })}
     </VerticalTimeline>
+    <h1>December Stats</h1>
+    <div2 className = "graph">
+      <DecMood />
+    </div2>
+    <div2 className = "graph">
+      <DecLoc />
+    </div2>
     <h1>Summary Statistics:</h1>
     <div2 className = "graph">
       <Graph />
     </div2>
+    <h1>Most Visited Place: </h1>
+    <h1>Aliya Kanji / Whitman Common Room</h1>
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
