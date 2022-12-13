@@ -189,8 +189,6 @@ function App() {
     <div2 className = "graph">
       <Graph />
     </div2>
-    <h1>Most Visited Place: </h1>
-    <h1>Aliya Kanji / Whitman Common Room</h1>
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
