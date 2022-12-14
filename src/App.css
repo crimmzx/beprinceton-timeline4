@@ -4,6 +4,14 @@ body {
   font-size: 20px;
   color: rgb(53, 53, 53);
 }
+.top {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+}
 .graph{
   height: 40%;
   width: 40%;

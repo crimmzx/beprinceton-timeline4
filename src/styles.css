@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+nav{
+    height: 50px;
+    background: rgb(17, 17, 17);
+    transition: .3s;
+}
+
+nav.sticky{
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin: auto;
+}
+.links a{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+}

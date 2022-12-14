@@ -14,6 +14,8 @@ import { ReactComponent as NovMood } from "./svgs/bar graphs/Mood (Nov).svg";
 import { ReactComponent as NovLoc } from "./svgs/bar graphs/pi graphs/Location (Nov).svg";
 import { ReactComponent as DecMood } from "./svgs/bar graphs/Mood (Dec).svg";
 import { ReactComponent as DecLoc } from "./svgs/bar graphs/pi graphs/Location (Dec).svg";
+import Navbar from "./components/Navbar";
+import "./styles.css"
 
 import{VerticalTimeline, 
   VerticalTimelineElement
@@ -24,11 +26,10 @@ import "react-vertical-timeline-component/style.min.css"
 function App() {
   let workIconStyles = { background: "#06D6A0" };
   let schoolIconStyles = { background: "#f9c74f" };
-  <div>
-    <graph1/>
-  </div>
   return (
+    
   <div>
+        <Navbar />
     <h1 className = "title">BePrinceton.</h1>
     <h2>BeReal images are images that are taken at a random time whenever the app chooses to go off. <br>
     </br>
@@ -39,8 +40,8 @@ function App() {
       and displays them in a timeline order. 
     </h2>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
-    
-    
+    <h1 id = "September"><br>
+    </br></h1>
     <h1>September:</h1>
     <VerticalTimeline>
       {
@@ -77,6 +78,8 @@ function App() {
     <div2 className = "graph">
       <SepLoc />
     </div2>
+    <h1 id = "October"><br>
+    </br></h1>
     <h1>October:</h1>
     <VerticalTimeline>
       {
@@ -113,6 +116,8 @@ function App() {
     <div2 className = "graph">
       <OctLoc />
     </div2>
+    <h1 id = "November"><br>
+    </br></h1>
     <h1>November:</h1>
     <VerticalTimeline>
       {
@@ -149,6 +154,8 @@ function App() {
     <div2 className = "graph">
       <NovLoc />
     </div2>
+    <h1 id = "December"><br>
+    </br></h1>
     <h1>December:</h1>
     <VerticalTimeline>
       {
@@ -185,10 +192,13 @@ function App() {
     <div2 className = "graph">
       <DecLoc />
     </div2>
+    <h1 id = "Summary Statistics"><br>
+    </br></h1>
     <h1>Summary Statistics:</h1>
     <div2 className = "graph">
       <Graph />
     </div2>
+    <h2><a class="top" href="/#">Back to Top ↑</a></h2>
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
