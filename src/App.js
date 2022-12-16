@@ -16,6 +16,7 @@ import { ReactComponent as DecMood } from "./svgs/bar graphs/Mood (Dec).svg";
 import { ReactComponent as DecLoc } from "./svgs/bar graphs/pi graphs/Location (Dec).svg";
 import Navbar from "./components/Navbar";
 import "./styles.css"
+import BackToTopButton from './components/BackToTopButton';
 
 import{VerticalTimeline, 
   VerticalTimelineElement
@@ -29,7 +30,7 @@ function App() {
   return (
     
   <div>
-        <Navbar />
+      <Navbar />
     <h1 className = "title">BePrinceton.</h1>
     <h2>BeReal images are images that are taken at a random time whenever the app chooses to go off. <br>
     </br>
@@ -198,7 +199,7 @@ function App() {
     <div2 className = "graph">
       <Graph />
     </div2>
-    <h2><a class="top" href="/#top">Back to Top ↑</a></h2>
+    <BackToTopButton />
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
