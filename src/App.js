@@ -198,7 +198,7 @@ function App() {
     <div2 className = "graph">
       <Graph />
     </div2>
-    <h2><a class="top" href="/#">Back to Top ↑</a></h2>
+    <h2><a class="top" href="/#top">Back to Top ↑</a></h2>
     <h2> William Zhang Fall 2022.
     </h2>
   </div>
